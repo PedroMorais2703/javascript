@@ -1,0 +1,1 @@
+setInterval(escrever, 1000);
