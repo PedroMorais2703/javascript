@@ -14,3 +14,19 @@ console.log(notas[2])
 //alterando o valor a partir do indice
 notas[2] = 12;
 console.log(notas);
+
+//inserindo elementos no final do array
+var nomes = ['paula', 'maria', 'pedro'];
+console.log(nomes);
+
+nomes.push('vanessa');
+console.log(nomes);
+
+//tamanho do array (quantidade de elementos)
+console.log(nomes.length);
+
+//ordenando os dados de um array
+var alunos2 = ['vanessa', 'maria', 'pedro', 'beatriz']
+console.log(alunos2);
+alunos2.sort();// ordenando array de string
+console.log(alunos2);
