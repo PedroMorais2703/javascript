@@ -35,8 +35,8 @@ class Pessoa{
 
 class Carro {
     constructor(modelo){
-        this.marca = 'Honda';
-        this.modelo = modelo;
+        this._marca = 'Honda';
+        this._modelo = modelo;
     }
 
     imprimir(){
