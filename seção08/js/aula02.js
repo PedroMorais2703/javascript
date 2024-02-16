@@ -10,8 +10,6 @@ console.log(a.parentNode.parentNode.parentNode); // Document
 
 console.log(a.parentNode.parentNode.parentNode.parentNode);// null
 
-console.log(a.parentNode.parentNode.childNodes); 
-
 console.log(a.parentNode.parentNode.firstChild); //head
 
 console.log(a.firstChild); 
