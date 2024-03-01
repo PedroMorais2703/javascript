@@ -16,6 +16,10 @@ let tarefas = [
 ];
 
 function renderizarTarefas(){
+
+    //Limpar a listagem de itens antes de renderizar novamente a tela
+    lista.innerHTML = '';
+
     for(tarefa of tarefas){
         //criar o item da lista
         let itemLista = document.createElement('li');
@@ -37,3 +41,15 @@ function renderizarTarefas(){
 // Executando a função para renderizar as tarefas
 renderizarTarefas();
 
+//1) Precisamos "escutar" o evento de clique no botão
+btn.onclick = function(){
+    
+    //2) Precisamos capturar ovalor digitado pelo usuario no input
+    let novaTarefa = input.value;
+
+    //3) Executar a função para renderizar as tarefas
+    renderizarTarefas();
+
+    //Limpando o input
+    input.value = '';
+}
