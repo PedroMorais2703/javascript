@@ -47,9 +47,42 @@ btn.onclick = function(){
     //2) Precisamos capturar ovalor digitado pelo usuario no input
     let novaTarefa = input.value;
 
-    //3) Executar a função para renderizar as tarefas
-    renderizarTarefas();
+    if(novaTarefa !== ""){
+        //3) Precisamos atualizar a nova tarefa na lista (array) de tarefas e renderizar a tela
+        tarefas.push(novaTarefa);
+        
+        // Executar a função para renderizar as tarefas
+        renderizarTarefas();
 
-    //Limpando o input
-    input.value = '';
+        //Limpando o input
+        input.value = '';
+
+        //remover spans
+        removerSpans();
+    }else{
+        //remover spans
+        removerSpans();
+
+        let card = codument.querySelector('.card');
+
+        let span = document.createElement('span');
+        span.setAttribute('class', 'alert alert-warning');
+
+        let msg = document.createTextNode('Você precisa informar a tarefa!');
+
+        span.appendChild(msg);
+
+        card.appendChild(span);
+    }
+   
+}
+
+function removerSpans(){
+    let spans = document.querySelectorAll('spans');
+
+    let card = document.querySelector('.card');
+
+    for(let i = 0; i < spans.length; i++) {
+        card.removeChild(spans[i]);
+    }
 }
